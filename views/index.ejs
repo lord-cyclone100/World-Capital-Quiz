@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the capital</h1>
+        <h3><%= countryName %></h3>
+        <form action="/done" method="post">
+            <input type="text" name="countryCapital" placeholder="Enter the capital" class="cap" required>
+            <input type="hidden" name="nameCountry" value="<%= countryCapital %>">
+            <input type="hidden" name="score" value= <%= score %>>
+            <input type="submit" value="Confirm" class="sub">
+        </form>
+        <% if(locals.score){ %>
+            <h4>Score : <%= score %></h4>
+          <% }else{ %>
+            <h4>Score : 0</h4>
+          <% } %>
+    </div>
+</body>
+</html>

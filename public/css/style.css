@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-image: url('../images/world.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/world.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.container{
+    height: 200px;
+    width: 300px;
+    background-color: rgba(213, 212, 212, 0.718);
+    border-radius: 12px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+    width: 100%;
+}
+
+.cap{
+    width: 90%;
+    padding-left: 4%;
+    border-radius: 8px;
+    height: 6vh;
+}
+
+.sub{
+    padding: 1vh;
+    width: 30%;
+    border-radius: 8px;
+    color: aliceblue;
+    background-color: rgb(30, 28, 28);
+}
+
+h4{
+    margin-top: 2vh;
+}
